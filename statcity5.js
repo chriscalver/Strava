@@ -115,7 +115,9 @@ async function getAccessTokens() {
     document.getElementById("RideKms").innerHTML = ridekms.toFixed(2);
 
     document.getElementById("WorkOutNum").innerHTML = workoutcount;
-    document.getElementById("WorkOutMins").innerHTML = workoutmins / 60;
+    document.getElementById("WorkOutMins").innerHTML = Math.round(
+      workoutmins / 60
+    );
 
     console.log(data.length); // number of results
     document.getElementById("ActNum").innerHTML = data.length;
