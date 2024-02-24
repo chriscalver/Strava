@@ -92,8 +92,9 @@ async function getAccessTokens() {
       if (data[i].type == "Workout") {
         workoutcount++;
         workoutmins = workoutmins + data[i].moving_time;
+
         //ridekms = ridekms + data[i].distance;
-        console.log(workoutmins);
+        console.log("************" + workoutmins);
       }
 
       // text += data[i] + "<br>";
@@ -115,9 +116,9 @@ async function getAccessTokens() {
     document.getElementById("RideKms").innerHTML = ridekms.toFixed(2);
 
     document.getElementById("WorkOutNum").innerHTML = workoutcount;
-    document.getElementById("WorkOutMins").innerHTML = Math.round(
-      workoutmins / 60
-    );
+    workoutmins = workoutmins / 60;
+
+    document.getElementById("WorkOutMins").innerHTML = workoutmins.toFixed(2);
 
     console.log(data.length); // number of results
     document.getElementById("ActNum").innerHTML = data.length;
