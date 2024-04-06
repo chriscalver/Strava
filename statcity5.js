@@ -42,8 +42,9 @@ async function getAccessTokens() {
     }
   );
   const response = await request.json();
-  console.log(response);
+
   AccessCode = response.access_token;
+
   //document.getElementById('AccesCode').innerHTML = AccessCode;
 
   ///////////////////////////////////////////   gets all activities
@@ -83,7 +84,6 @@ async function getAccessTokens() {
         runkms = runkms + data[i].distance;
         console.log(runkms);
       }
-
       if (data[i].type == "Ride") {
         ridecount++;
         ridekms = ridekms + data[i].distance;
@@ -96,7 +96,6 @@ async function getAccessTokens() {
         //ridekms = ridekms + data[i].distance;
         console.log("************" + workoutmins);
       }
-
       // text += data[i] + "<br>";
       i++;
     }
