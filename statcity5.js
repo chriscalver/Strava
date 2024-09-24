@@ -5,14 +5,14 @@ console.log(d);
 var day = d.getDay(),
   diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
 var newdate = new Date(d.setDate(diff));
-var hour = newdate.getHours();
-var mins = newdate.getMinutes();
-var secs = newdate.getSeconds();
+// var hour = newdate.getHours();
+// var mins = newdate.getMinutes();
+// var secs = newdate.getSeconds();
 
 console.log(newdate);
-console.log(hour);
-console.log(mins);
-console.log(secs);
+// console.log(hour);
+// console.log(mins);
+// console.log(secs);
 
 newdate.setHours(0);
 newdate.setMinutes(0);
@@ -26,6 +26,8 @@ console.log(newdate);
 //var epoch = newdate.getTime() - newdate.getMilliseconds() / 1000;
 
 var myEpoch = newdate.getTime() / 1000.0;
+console.log(myEpoch);
+
 let Monday = myEpoch.toFixed();
 console.log(myEpoch.toFixed());
 
@@ -212,6 +214,18 @@ getAccessTokens()
     console.error(error);
   });
 
+
+
+
+
+
+
+
+
+
+
+
+  
 ////////////////////////////////////////////////////////////////////  Weather information Below
 
 async function getCurrentConditions() {
